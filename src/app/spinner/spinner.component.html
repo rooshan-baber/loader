@@ -1,0 +1,10 @@
+<!-- Custom SPINNER -->
+<button mat-raised-button color="primary" (click)="startLoader()">Start Loader</button>
+<div *ngIf="loader.isLoading$ | async">
+  <div class="overlay global"></div>
+  <div class="spinner global">
+    <div>
+      <img src="assets\spinner.svg" alt="logo" />
+    </div>
+  </div>
+</div>
