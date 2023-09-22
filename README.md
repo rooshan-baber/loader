@@ -1,27 +1,21 @@
-# Test
+Custom Loader in Angular 15
+Project Description:
+This project demonstrates the implementation of a custom loader in Angular 15. The loader is designed to show a loading spinner when making HTTP requests and hide it once the request is complete. The loader is implemented as an HTTP interceptor and utilizes Angular's RxJS and Material Design components.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.9.
+Features:
+Loader Interceptor: The LoaderInterceptor intercepts HTTP requests and responses to control the display of the loader.
 
-## Development server
+Custom Spinner Component: The SpinnerComponent displays a loading spinner and allows you to manually trigger it with a button click.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Loader Service: The LoaderService keeps track of the number of active API requests and controls the visibility of the loader.
 
-## Code scaffolding
+Usage:
+To use this loader in your Angular application, follow these steps:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Import the LoaderInterceptor into your app module and add it to the HTTP_INTERCEPTORS providers.
 
-## Build
+Include the <app-spinner></app-spinner> tag in your application's HTML to display the loader component.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+You can manually trigger the loader by calling this.loader.showLoader() and hide it using this.loader.hideLoader() in your components.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Customize the loader's appearance and behavior in the spinner.component.html and loader.service.ts files to match your project's requirements.
